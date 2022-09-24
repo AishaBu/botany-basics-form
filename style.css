@@ -47,4 +47,49 @@ body{
 }
 
 
+ /**MEDIA QUERIES**/
+ /*Mobile devices portrait*/
+ /*280px only */
+ @media(width:280px){
+
+    #banner-text{
+        min-width: 50%;
+        font-size: 20px !important;
+        position: absolute; 
+        top: 50px !important;
+        bottom: 0;
+    }
+
+ }
+
+/*414px and below-mobile devices*/
+@media(max-width:414px){
+
+    .container{
+        flex-direction: column;
+        margin-top: 170px;
+    }
+      
+     #flowers-image{
+        width: 100%;
+        height: 400px;
+     }
+    
+     #form-container{
+        width: 100%;
+        min-height: 100%;
+    }
+    
+    #banner-text{
+        width: 60%;
+        font-size: 30px;
+        position: relative;
+        top: 60px;
+        bottom: 0;
+        left: 20px;
+        white-space: nowrap;
+    }
+    
+    }
+
 
