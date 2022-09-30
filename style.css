@@ -5,15 +5,12 @@
 }
 
 .container-layout{
-    /* background-color: rgb(80, 78, 78); */
    min-height: 100vh;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 100px;
 }
-
-
 
 #botany-basics-title{
     width: 18%;
@@ -43,11 +40,6 @@ form{
     background-color: whitesmoke;
     width: 60vw;
     height: 100vh;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -57,15 +49,18 @@ form{
 
 .sign-up-now-par{
     font-size: 20px; 
+    margin-top: 100px;
+    
 }
 
 .required-asterisk-par{
     font-size: 16px;
-    min-width: 600px; 
+}
 
+.sign-up-now-par, .required-asterisk-par{
     position: relative;
-    right: 250px;
-
+    left: 20px;
+    margin-bottom: 50px;
 }
 
 label{
@@ -121,28 +116,17 @@ ul {
 
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     text-align: center;
-    margin-top: 10px;
 }
 
 
 .submit-button:hover{
-        
     background-color: rgb(228, 151, 189);
-
-}
-
-
-.submit-button, .have-account-par{
-    position: relative;
-    right: 450px;
 }
 
 
 .have-account-par{
     padding-top: 10px;
-    padding-left: 40px;
-    text-align: center;
-    max-width: 400px;  
+    text-align: left; 
 }
 
 
@@ -163,22 +147,14 @@ color: rgb(228, 151, 189);
 footer{
         background-color: black;
         height: 50px;
-        width: 100%;
+        width: 100vw;
 
         display: flex;
         justify-content: center;
         align-items: center;
-
-        margin-top: auto;  
 }
 
 footer p{
         color: white;
  }
-
-
-/*Pass Rules*/
-.pass-rules{
-    display: none;
-}
 

@@ -13,7 +13,7 @@
 <body> 
     <div class="container-layout">
    <h1 id="botany-basics-title">Botany Basics</h1>
-    <img src="./images/flowers-images.jpg" id="flowers-image"> 
+   <img src="./images/flowers-images.jpg" id="flowers-image"> 
         
         <!--FORM-->
         <form action="" method="get">
@@ -23,7 +23,7 @@
 
             <p class="required-asterisk-par">Required fields are followed by an asterisk <snap aria-label="required">*</snap></p>
 
-            <ul class="label-and-input">
+            <ul>
                 <li>
                     <label for="first-name">First Name<snap aria-label="required">*</snap></label>
                     <input type="text" id="first-name" required>
@@ -53,26 +53,16 @@
                     <label for="confirm-password">Confirm Password<snap aria-label="required">*</snap></label>
                     <input type="password" id="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                 </li>
-
-            <!--Hidden Pass Rule-->
-                <div class="pass-rules">
-                    <p>1 Uppercase</p>
-                    <p> 1 Lowercase</p>
-                    <p>1 Number</p>
-                    <p>1 Special character</p>
-                    <p>Minimum 8 characters</p>
-                </div>
-            </ul>
-
-            <!--Button and Account/Login Question-->
-            <div class="button">
-                <button type="submit" class="submit-button"> Sign Up</button> 
-            </div>
-        <p class="have-account-par">Already have an account? <a href="#" class="login-link">Log in</a></p>
-        
     </form>
+
+     <!--Button and Account/Login Question-->
+     <div class="button-and-par">
+        <button type="submit" class="submit-button"> Sign Up</button> 
+        <p class="have-account-par">Already have an account? <a href="#" class="login-link">Log in</a></p>
+    </div>
+
  </div>
- 
+
 <footer>
     <p>&copy; 2022 AishaBu</p> 
 </footer>
