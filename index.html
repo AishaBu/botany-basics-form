@@ -11,14 +11,71 @@
 </head>
 
 <body> 
-<div class="container">
-     <h1 id="banner-text">Botany Basics</h1>
+    <div class="container-layout">
+   <h1 id="botany-basics-title">Botany Basics</h1>
     <img src="./images/flowers-images.jpg" id="flowers-image"> 
-    <div id="form-container"></div>
-</div>
-</body>
+        
+        <!--FORM-->
+        <form action="" method="get">
+            <div class="sign-up-now-banner">
+                <p class="sign-up-now-par">This is a demo registration page! Sign up <i>now</i> to get bi-weekly blog posts from Botany Basics!</p>
+            </div>
 
+            <p class="required-asterisk-par">Required fields are followed by an asterisk <snap aria-label="required">*</snap></p>
+
+            <ul class="label-and-input">
+                <li>
+                    <label for="first-name">First Name<snap aria-label="required">*</snap></label>
+                    <input type="text" id="first-name" required>
+                </li>
+
+                <li>
+                    <label for="last-name">Last Name <span class="optional">(optional)</span></label>
+                    <input type="text" id="last-name">
+                </li>
+
+                <li>
+                    <label for="email">Email<snap aria-label="required">*</snap></label>
+                    <input type="email" id="email" required>
+                </li>
+
+                <li>
+                    <label for="phone-number">Phone Number <span class="optional">(optional)</span></label>
+                    <input type="tel" id="phone-number" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                </li>
+
+                <li>
+                    <label for="user-password">Password<snap aria-label="required">*</snap></label>
+                    <input type="password" id="user-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                </li>
+
+                <li>
+                    <label for="confirm-password">Confirm Password<snap aria-label="required">*</snap></label>
+                    <input type="password" id="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                </li>
+
+            <!--Hidden Pass Rule-->
+                <div class="pass-rules">
+                    <p>1 Uppercase</p>
+                    <p> 1 Lowercase</p>
+                    <p>1 Number</p>
+                    <p>1 Special character</p>
+                    <p>Minimum 8 characters</p>
+                </div>
+            </ul>
+
+            <!--Button and Account/Login Question-->
+            <div class="button">
+                <button type="submit" class="submit-button"> Sign Up</button> 
+            </div>
+        <p class="have-account-par">Already have an account? <a href="#" class="login-link">Log in</a></p>
+        
+    </form>
+ </div>
+ 
 <footer>
     <p>&copy; 2022 AishaBu</p> 
 </footer>
+
+</body>
 </html>
