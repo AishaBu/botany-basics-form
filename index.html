@@ -10,19 +10,19 @@
     <title>Botany Basics</title>
 </head>
 
-<body> 
-    <div class="container-layout">
-   <h1 id="botany-basics-title">Botany Basics</h1>
-   <img src="./images/flowers-images.jpg" id="flowers-image"> 
+<body>   
+    <div class="container">
+        <div class="title-and-image">
+                <h1 id="botany-basics-title">Botany Basics</h1>
+                <img src="./images/flowers-images.jpg" id="flowers-image">
+        </div>
+
+        <div class="par-and-form-background">
+                <p class="sign-up-now-par">This is a demo registration page! Sign up <i>now</i> to get bi-weekly blog posts from Botany Basics! You don't want to miss out on awesome plants!</p>
+                <p class="required-asterisk-par">Required fields are followed by an asterisk <snap aria-label="required">*</snap></p>
         
         <!--FORM-->
-        <form action="" method="get">
-            <div class="sign-up-now-banner">
-                <p class="sign-up-now-par">This is a demo registration page! Sign up <i>now</i> to get bi-weekly blog posts from Botany Basics!</p>
-            </div>
-
-            <p class="required-asterisk-par">Required fields are followed by an asterisk <snap aria-label="required">*</snap></p>
-
+        <form action="" method="get" id="button-reference">
             <ul>
                 <li>
                     <label for="first-name">First Name<snap aria-label="required">*</snap></label>
@@ -36,7 +36,7 @@
 
                 <li>
                     <label for="email">Email<snap aria-label="required">*</snap></label>
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" value="" required>
                 </li>
 
                 <li>
@@ -53,15 +53,15 @@
                     <label for="confirm-password">Confirm Password<snap aria-label="required">*</snap></label>
                     <input type="password" id="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                 </li>
-    </form>
 
-     <!--Button and Account/Login Question-->
-     <div class="button-and-par">
-        <button type="submit" class="submit-button"> Sign Up</button> 
-        <p class="have-account-par">Already have an account? <a href="#" class="login-link">Log in</a></p>
+                <div class="button-and-par">
+                    <button type="submit" class="submit-button"> Sign Up</button> 
+                    <p class="have-account-par">Already have an account? <a href="#" class="login-link">Log in</a></p>
+                </div>
+    </form>
     </div>
 
- </div>
+    </div>
 
 <footer>
     <p>&copy; 2022 AishaBu</p> 
