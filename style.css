@@ -4,22 +4,37 @@
 }
 
 body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: rgb(167, 167, 167);
-    margin: auto;
 }
 
 .container{
     display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+.par-and-form-background{
+    background-color: rgb(255, 255, 255);
 }
 
 .title-and-image{
     position: relative;
     text-align: center;
     opacity: 85%;
+}
+
+img{
+    width: 30vw;
+    height: 100%;
+}
+
+.par-and-form-background{
+    width: 70vw;
+}
+
+img, .par-and-form-background{
+    height: 100vh;
 }
 
 #botany-basics-title{
@@ -31,9 +46,11 @@ body{
     background-color: rgb(10, 10, 10, .2);
     width: 100%;
     height: 100px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    
     top: -3%;
     left: -3%;
     transform: translate(3%, 3%);
@@ -41,30 +58,14 @@ body{
     text-transform: uppercase;
 }
 
-
-#flowers-image{
-    width: 40vw;  
-    height: 100%;
-}
-
-form{
-    margin-top: 80px;
-}
-
-.par-and-form-background{
-    background-color: rgb(255, 255, 255);
-}
-
 .sign-up-now-par{
     font-size: 25px; 
     font-weight: bold;
-    margin-top: 80px;
-    width: 800px;
 }
 
 .required-asterisk-par{
     font-size: 16px;
-    margin-top: 60px;
+    padding-top: 60px;
 }
 
 .sign-up-now-par, .required-asterisk-par{
@@ -101,8 +102,7 @@ input:focus{
 ul {
     list-style-type: none;  
     background-color: rgb(255, 255, 255);  
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); 
-    height: auto;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -115,11 +115,6 @@ ul {
 
 /*Sign Up Button*/
 
-.button-and-par{
-    position: absolute;
-    margin-top: 400px;
-    left: 50%;
- }
 
 .submit-button{
     width: 150px;
@@ -183,3 +178,53 @@ footer p{
         text-align: center;
     }
 
+
+    /*MEDIA QUERIES*/
+    /*number and below*/
+@media(max-width:1120px){
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    img, form, .par-and-form-background{
+        width: 100vw;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sign-up-now-par{
+        max-width: 600px;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+}
+
+@media(max-width: 379px){
+
+    .img{
+        height: 100%;
+        width: 100%;
+    }
+
+    input{
+        max-width: 200px;
+    }
+
+    .sign-up-now-par, .required-asterisk-par{
+        max-width: 250px;
+    }
+
+    .have-account-par{
+        text-align: center;
+    }
+
+}
