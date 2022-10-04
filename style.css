@@ -180,11 +180,8 @@ footer{
         align-items: center;
         justify-content: center;    
 
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: none;
+       margin-top: auto;
+    
     
     }
 
@@ -264,4 +261,16 @@ footer p{
         max-width: 610px;
         text-align: left;
     }
+}
+
+/*Galaxy Fold*/
+@media(width: 280px){
+
+    .sign-up-now-par{
+        font-size: 15px;
+    }
+    .required-asterisk-par, .sign-up-now-par{
+        max-width: 200px;
+    }
+   
 }
