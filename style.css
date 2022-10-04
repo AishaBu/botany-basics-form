@@ -220,7 +220,6 @@ footer p{
     .sign-up-now-par{
         max-width: 630px;
         text-align: left;
-
     }
 
     .required-asterisk-par{
@@ -230,6 +229,12 @@ footer p{
     .button-and-par, .have-account-par{
         text-align: center;
     }
+
+    .par-and-form-background{
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+    }
+    
 
 }
 
@@ -243,4 +248,12 @@ footer p{
         max-width: 250px;
     }
 
+}
+
+/*number and above to no more than number and below*/
+@media(min-width:1283px) and (max-width: 1400px){
+    .sign-up-now-par{
+        max-width: 610px;
+        text-align: left;
+    }
 }
