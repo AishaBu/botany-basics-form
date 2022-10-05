@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Link Styles Page-->
+    <!--Link Styles and JS Files-->
     <link href="./style.css" rel="stylesheet"/>
+    <script src="./script.js" defer></script>
+
     <title>Botany Basics</title>
 </head>
 
@@ -24,21 +26,24 @@
                 <p class="required-asterisk-par">Required fields are followed by an asterisk <snap aria-label="required">*</snap></p>
         
         <!--FORM-->
-        <form action="" method="get" id="button-reference">
+        <form action="" method="get" id="button-reference" novalidate>
             <ul>
                 <li>
                     <label for="first-name">First Name<snap aria-label="required">*</snap></label>
-                    <input type="text" id="first-name" required>
+                    <input type="text" id="first-name" pattern="[A-Za-z0-9]+" required>
+                    <span class="error" aria-live="polite"></span>
                 </li>
 
                 <li>
                     <label for="last-name">Last Name <span class="optional">(optional)</span></label>
-                    <input type="text" id="last-name">
+                    <input type="text" id="last-name" pattern="[A-Za-z0-9]+">
+                    <span class="error" aria-live="polite"></span>
                 </li>
 
                 <li>
                     <label for="email">Email<snap aria-label="required">*</snap></label>
                     <input type="email" id="email" value="" required>
+                    <span class="error" aria-live="polite"></span>
                 </li>
 
                 <li>
