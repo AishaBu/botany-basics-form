@@ -49,16 +49,19 @@
                 <li>
                     <label for="phone-number">Phone Number <span class="optional">(optional)</span></label>
                     <input type="tel" id="phone-number" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                    <span class="error" aria-live="polite"></span>
                 </li>
 
                 <li>
                     <label for="user-password">Password<snap aria-label="required">*</snap></label>
-                    <input type="password" id="user-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                    <input type="password" id="user-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" minlength="8" required>
+                    <span class="error" aria-live="polite"></span>
                 </li>
 
                 <li>
                     <label for="confirm-password">Confirm Password<snap aria-label="required">*</snap></label>
-                    <input type="password" id="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                    <input type="password" id="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" minlength="8" required>
+                    <span class="error" aria-live="polite"></span>
                 </li>
             </ul>
 
