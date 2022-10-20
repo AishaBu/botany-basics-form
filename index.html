@@ -54,14 +54,25 @@
 
                 <li>
                     <label for="user-password">Password<snap aria-label="required">*</snap></label>
-                    <input type="password" id="user-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" minlength="8" required>
-                    <span class="error" aria-live="polite"></span>
+                    <input type="password" id="user-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" minlength="8" maxlength="20" required>
+                    <span class="error" aria-live="polite"></span> 
+                    <button id="show-user-pass-toogle" aria-live="polite">Show Password</button>
                 </li>
 
                 <li>
                     <label for="confirm-password">Confirm Password<snap aria-label="required">*</snap></label>
-                    <input type="password" id="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" minlength="8" required>
+                    <input type="password" id="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" minlength="8" maxlength="20" required>
                     <span class="error" aria-live="polite"></span>
+                    <button id="show-confirm-pass-toogle" aria-live="polite">Show Password</button>
+                </li>
+
+                <li id="password-tooltip">
+                    <h4>Password must contain the following:</h4>
+                    <p  id="upper-case-letter" data-is-valid="false">A capital (uppercase) letter</p>
+                    <p  id="lower-case-letter" data-is-valid="false">A lowercase letter</p>
+                    <p id="a-number" data-is-valid="false">A number</p>
+                    <p id="special-character" data-is-valid="false">A special character</p>
+                    <p id="minimum-character-length" data-is-valid="false">Minimum 8 characters</p>
                 </li>
             </ul>
 
