@@ -20,7 +20,7 @@ body{
 #image-placeholder{
     width: 40vw;
     height: 100vh;
-    background-color: rgb(163, 58, 128);
+    /*background-color: rgb(163, 58, 128);*/
 }
 
 img{
@@ -119,6 +119,14 @@ form.submitted input:invalid{
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
+#first-name.input-invalid, #last-name.input-invalid, #email.input-invalid, 
+#phone-number.input-invalid, #user-password.input-invalid, 
+#confirm-password.input-invalid{
+    outline: none;
+    border: 1.8px solid rgb(128, 12, 8);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
 ul {
     list-style-type: none;  
     background-color: rgb(255, 255, 255);  
@@ -130,6 +138,7 @@ ul {
 
     padding: 30px;
 }
+
 
 
 /*Sign Up Button*/
@@ -209,14 +218,44 @@ footer p{
         margin-top: 5px;
     }
 
-   
+    #password-tooltip{
+        font-size: 14px;
+        display: none;
+        margin-top: 8px;
+    }
 
+    /*Valid Data false*/
+    p[data-is-valid = "false"]{
+        color:red;   
+    }
 
+    p[data-is-valid = "false"]::before{
+        position: relative;
+        content: 'X ';
+        left: 0;
+        font-weight: bold;
+    }
+     
+   /*Valid Data true*/
+    p[data-is-valid = "true"]::before{
+        position: relative;
+        content: '\2714 \fe0e';
+        left: 0;
+        font-weight: bold;
+    }
 
+    p[data-is-valid = "true"]{
+        color:green;   
+    }
 
-
-
-
+#show-user-pass-toogle, 
+#show-confirm-pass-toogle{
+    border: none;
+    cursor: pointer;
+    position:absolute; 
+    margin-top: 5px;
+    display: none;
+}
 
 
 
@@ -270,9 +309,37 @@ footer p{
         height: 100%;
     }
     
+    /*Error Messages*/
+    .error{
+        margin-top: -10px;
+        margin-bottom: 15px;
+    }
+  
+    #punctuation-error-message{
+        width: 200px; 
+    }
 
+    #email-format-error-message, 
+    #phone-format-error-message{
+        width:175px
+    }
+
+    #confirm-password-error-message{
+       width:170px ;
+    }
+
+    #user-password-length-error-message, 
+    #confirm-password-length-error-message{
+        width: 180px;
+    }
+
+     #password-tooltip{
+        font-size: 12px;
+        margin: auto;
+    }
 }
 
+/*414px only*/
 @media(max-width: 414px){
 
     input{
@@ -289,6 +356,7 @@ footer p{
     }
 
 }
+
 
 /*number and above to no more than number and below*/
 @media(min-width:1283px) and (max-width: 1400px){
