@@ -395,12 +395,12 @@ function checksFormInputsWhenSubmitted(){
         userPasswordErrorMessage.style.color = "red";
         passwordTooltip.style.display = "none";
 
-        confirmPasswordErrorMessage.textContent = "You need to enter a confirmation password";
+        confirmPasswordErrorMessage.textContent = "*You need to enter a confirmation password";
         confirmPasswordErrorMessage.setAttribute('id','confirm-password-error-message');
         confirmPasswordErrorMessage.style.color = "red";
 
-        showUserPassToogle.style.display = 'none';
-        showConfirmPassToogle.style.display = "none";
+        showUserPassToggle.style.display = 'none';
+        showConfirmPassToggle.style.display = "none";
    
     }
     else if(userPassword.validity.patternMismatch || confirmPassword.validity.patternMismatch){
@@ -418,6 +418,11 @@ form.addEventListener("submit", (event) => {
     if (!firstName.validity.valid || !lastName.validity.valid || !emailAddress.validity.valid 
         || !phoneNumber.validity.valid || !userPassword.validity.valid || !confirmPassword.validity.valid) {
 
+        /*Along with displaying the error message, it will prevent 
+        the form from being sent by canceling the submit button event*/
+
+        event.preventDefault();
+
       /*If it the input fields are invalid, it will give the form a class of submitted,which is styled in the css, 
       this is so it doesn't show the invalid style right away on page load, it will wait for the submit
        button to be clicked, and it will display the error message*/
@@ -425,10 +430,6 @@ form.addEventListener("submit", (event) => {
         form.setAttribute('class', 'submitted');
         checksFormInputsWhenSubmitted();
        
-      /*Along with displaying the error message, it will prevent 
-      the form from being sent by canceling the submit button event*/
-
-      event.preventDefault();
     }
   });
 
