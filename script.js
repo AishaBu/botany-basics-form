@@ -248,15 +248,25 @@ form.addEventListener("submit", (event) => {
             showUserPassToggle.style.display = 'block';
             showConfirmPassToggle.style.display = "block";
 
-        
-
-            /*Show password on mouse enter*/
+            /*Show password on mouse enter(hover)*/
             showUserPassToggle.onmouseenter = () => {
                 showUserPassToggle.textContent = userPassword.value;
             }
 
             showConfirmPassToggle.onmouseenter = () => { 
                 showConfirmPassToggle.textContent = confirmPassword.value};
+
+            /*Show password on mouse click for mobile devices*/
+            showUserPassToggle.addEventListener('click', () => {
+                showUserPassToggle.textContent = userPassword.value;
+                showUserPassToggle.style.display = 'block';
+            });
+
+            showConfirmPassToggle.addEventListener('click', () => { 
+                showConfirmPassToggle.textContent = confirmPassword.value;
+                showConfirmPassToggle.style.display = "block";
+            });
+
 
             /*Update values in input,when changed*/
             userPassword.addEventListener('input', () => {
