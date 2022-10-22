@@ -8,8 +8,8 @@ const phoneNumber = document.getElementById('phone-number');
 const userPassword = document.getElementById('user-password');
 const confirmPassword = document.getElementById('confirm-password');
 const showPassword = document.getElementById('show-password');
-let showUserPassToogle = document.getElementById('show-user-pass-toogle');
-let showConfirmPassToogle = document.getElementById('show-confirm-pass-toogle');
+let showUserPassToggle = document.getElementById('show-user-pass-toggle');
+let showConfirmPassToggle = document.getElementById('show-confirm-pass-toggle');
 
 
 const firstNameErrorMessage = document.querySelector('#first-name + span.error');
@@ -25,6 +25,10 @@ const lowerCaseLetter = document.getElementById('lower-case-letter');
 const aNumber = document.getElementById('a-number');
 const specialCharacter = document.getElementById('special-character');
 const minCharacterLength = document.getElementById('minimum-character-length');
+ 
+
+const Button = document.querySelector('.submit-button');
+const haveAccPar = document.querySelector('.have-account-par');
 
 
 /*First Name*/
@@ -224,13 +228,14 @@ function checkPasswordsLength(){
     
 }
 
+
 /*While the input field is not empty, and form is submitted,
  values should be compared for match*/
 form.addEventListener("submit", (event) => {
 
         /*Reset Password text when passwords are updated*/
-        showUserPassToogle.textContent = "Show Password";
-        showConfirmPassToogle.textContent = "Show Password";
+        showUserPassToggle.textContent = "Show Password";
+        showConfirmPassToggle.textContent = "Show Password";
 
         if(userPassword.value != confirmPassword.value){
 
@@ -240,24 +245,26 @@ form.addEventListener("submit", (event) => {
 
             userPasswordErrorMessage.style.color = 'red';
 
-            showUserPassToogle.style.display = 'block';
-            showConfirmPassToogle.style.display = "block";
+            showUserPassToggle.style.display = 'block';
+            showConfirmPassToggle.style.display = "block";
+
+        
 
             /*Show password on mouse enter*/
-            showUserPassToogle.onmouseenter = () => {
-                showUserPassToogle.textContent = userPassword.value;
+            showUserPassToggle.onmouseenter = () => {
+                showUserPassToggle.textContent = userPassword.value;
             }
 
-            showConfirmPassToogle.onmouseenter = () => { 
-                showConfirmPassToogle.textContent = confirmPassword.value};
+            showConfirmPassToggle.onmouseenter = () => { 
+                showConfirmPassToggle.textContent = confirmPassword.value};
 
             /*Update values in input,when changed*/
             userPassword.addEventListener('input', () => {
-                showUserPassToogle.textContent = userPassword.value;
+                showUserPassToggle.textContent = userPassword.value;
             });
 
             confirmPassword.addEventListener('input', () => {
-                showConfirmPassToogle.innerHTML = confirmPassword.value
+                showConfirmPassToggle.innerHTML = confirmPassword.value
             });
 
             event.preventDefault();
@@ -270,8 +277,8 @@ form.addEventListener("submit", (event) => {
 
             userPasswordErrorMessage.style.color = 'green';
 
-            showUserPassToogle.style.display = 'none';
-            showConfirmPassToogle.style.display = "none";
+            showUserPassToggle.style.display = 'none';
+            showConfirmPassToggle.style.display = "none";
         }
 })
 

@@ -1,46 +1,47 @@
 *, html,::before, ::after{
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body, html{
-    background-color: rgb(167, 167, 167);
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    padding: 0px;
+    background-color: rgb(255, 255, 255);
     overflow-x: hidden;
+
+    /* Add to body-keeps footer 
+    below main content*/
+    display: flex;
+    flex-direction: column;
 }
+
 
 .container{
-    display: flex; 
-    justify-content: center;
-    align-items: center;
+    display: flex;  
     flex-direction: row;
+
+    /*Add to main or parent container
+    -keeps footer below main content*/
+    flex-grow: 1;
 }
 
-#image-placeholder{
-    width: 40vw;
-    height: 100vh;
-    /*background-color: rgb(163, 58, 128);*/
-}
 
-img{
-    width: 100%;
-    height: 100%;
+#flowers-image{
     object-fit: cover;
-}
-
-
-.par-and-form-background{
-    background-color: rgb(255, 255, 255);
-    width: 60vw;
     height: 100vh;
+    width: 40vw;
 }
 
 
-.title-and-image-placeholder{
+.form-background{
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 60vw;
+    flex-grow: 1;
+}
+
+
+.title-and-image{
     position: relative;
     text-align: center;
     opacity: 85%;
@@ -102,7 +103,6 @@ label{
     text-transform: lowercase;
 }
 
-
 input{
     appearance: none;
     width: 300px;
@@ -115,6 +115,7 @@ input:focus{
     border: 1.8px solid rgb(128, 161, 112);
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
+
 
 form.submitted input:invalid{
     outline: none;
@@ -169,7 +170,7 @@ ul {
 
 
 .have-account-par{
-    padding-top: 5px;
+    padding-top: 10px;
     text-align: left; 
 }
 
@@ -195,7 +196,7 @@ footer{
 
         display: flex;
         align-items: center;
-        justify-content: center; 
+        justify-content: center;  
     }
 
 footer p{
@@ -260,8 +261,8 @@ footer img{
         color:green;   
     }
 
-#show-user-pass-toogle, 
-#show-confirm-pass-toogle{
+#show-user-pass-toggle, 
+#show-confirm-pass-toggle{
     border: none;
     cursor: pointer;
     position:absolute; 
@@ -286,8 +287,8 @@ footer img{
         flex-direction: column;
     }
 
-    #image-placeholder,form,
-    .par-and-form-background{
+    #flowers-image,form,
+    .form-background{
         width: 100vw;
     }
 
@@ -317,7 +318,7 @@ footer img{
         text-align: center;
     }
 
-    .par-and-form-background{
+    .form-background{
         background-color: rgb(255, 255, 255);
         height: 100%;
     }
@@ -350,6 +351,18 @@ footer img{
         font-size: 12px;
         margin: auto;
     }
+
+    #show-user-pass-toggle, 
+    #show-confirm-pass-toggle{
+        margin-top: 5px;
+        position: relative;
+        bottom: 10px; 
+    }
+    
+
+    footer{
+        margin-top: 10px;
+    }
 }
 
 /*560px and below*/
@@ -375,7 +388,8 @@ footer img{
     .sign-up-now-par{
         font-size: 15px;
     }
-    .required-asterisk-par, .sign-up-now-par{
+    .required-asterisk-par, 
+    .sign-up-now-par{
         max-width: 200px;
     }
 }
@@ -389,4 +403,34 @@ footer img{
     }
 }
 
-   
+/*Height-This and min-above, and max-below*/
+@media(min-width: 1200px) and (max-height: 800px){
+
+    #flowers-image{
+        object-fit: cover;
+        height: 100%;
+        width: 40vw;
+    }
+    
+    .form-background{
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+        width: 60vw;
+    }
+
+    .button-and-par{
+        display: inline-block;
+    }
+
+    li + #password-tooltip{
+        margin-top: 25px;
+   }
+}
+
+/*Fix password tooltip hieght above 800px height*/
+@media(min-height: 800px){
+
+    li + #password-tooltip{
+        margin-top: 25px;
+   }
+}

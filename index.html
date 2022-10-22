@@ -13,18 +13,16 @@
 </head>
 
 <body>   
-    <div class="container">
-        <div class="title-and-image-placeholder">
+    <main class="container">
+        <div class="title-and-image">
                 <h1 id="botany-basics-title">Botany Basics</h1>
-                <div id="image-placeholder">
-                    <img src="./images/flowers-images.jpg" alt="flowers">
-                </div>
+                <img src="./images/flowers-images.jpg" alt="flowers" id="flowers-image">
         </div>
 
-        <div class="par-and-form-background">
+        <div class="form-background">
                 <p class="sign-up-now-par">This is a demo registration page! Sign up <i>now</i> to get bi-weekly blog posts from Botany Basics! You don't want to miss out on awesome plants!</p>
                 <p class="required-asterisk-par">Required fields are followed by an asterisk <snap aria-label="required">*</snap></p>
-        
+
         <!--FORM-->
         <form action="" method="get" id="button-reference" novalidate>
             <ul>
@@ -56,14 +54,14 @@
                     <label for="user-password">Password<snap aria-label="required">*</snap></label>
                     <input type="password" id="user-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" minlength="8" maxlength="20" required>
                     <span class="error" aria-live="polite"></span> 
-                    <button id="show-user-pass-toogle" aria-live="polite">Show Password</button>
+                    <button id="show-user-pass-toggle" aria-live="polite">Show Password</button>
                 </li>
 
                 <li>
                     <label for="confirm-password">Confirm Password<snap aria-label="required">*</snap></label>
                     <input type="password" id="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" minlength="8" maxlength="20" required>
                     <span class="error" aria-live="polite"></span>
-                    <button id="show-confirm-pass-toogle" aria-live="polite">Show Password</button>
+                    <button id="show-confirm-pass-toggle" aria-live="polite">Show Password</button>
                 </li>
 
                 <li id="password-tooltip">
@@ -83,7 +81,7 @@
     </form>
     </div>
 
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2022 AishaBu</p> 
