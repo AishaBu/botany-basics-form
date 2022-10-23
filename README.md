@@ -19,6 +19,7 @@ This sign up form was created for the Sign Up Form assignment in the Odin Projec
     <tr>
     <td>
         <img src="./images/botany-basics-phone.png" height = 900>
+        <br><br>
         <img src="./images/botany-basics-ipad.png" height = 900>
     </td>
     </tr>
