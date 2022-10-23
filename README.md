@@ -17,8 +17,8 @@ This sign up form was created for the Sign Up Form assignment in the Odin Projec
 ### Mobile and Tablet Devices
 <table>
     <tr>
-    <td><img src="./images/botany-basics-phone.png" height = 700></td>
-    <td><img src="./images/botany-basics-ipad.png" height = 700></td>
+    <td><img src="./images/botany-basics-phone.png" height = 800></td>
+    <td><img src="./images/botany-basics-ipad.png" height = 800></td>
     </tr>
 </table>
 
