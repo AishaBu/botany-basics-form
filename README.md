@@ -11,22 +11,14 @@ This sign up form was created for the Sign Up Form assignment in the Odin Projec
 
 #### Desktop Device
 <table>
-    <tr>
-    <td><img src="./images/botany-basics-desktop.png"></td>
-    </tr>
+    <tr><td><img src="./images/botany-basics-desktop.png"></td></tr>
 </table>
 
-### Mobile Device
+### Mobile and Tablet Devices
 <table>
     <tr>
-    <td><img src="./images/botany-basics-phone.png"></td>
-    </tr>
-</table>
-
-### Tablet Device
-<table>
-    <tr>
-    <td><img src="./images/botany-basics-ipad.png"></td>
+    <td><img src="./images/botany-basics-phone.png" height = 600></td>
+    <td><img src="./images/botany-basics-ipad.png" height = 600></td>
     </tr>
 </table>
 
