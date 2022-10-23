@@ -9,16 +9,24 @@
 ### Description
 This sign up form was created for the Sign Up Form assignment in the Odin Project. The assignment is to make a fully functional sign up form using HTML, CSS, and JavaScript. I did the form validation by using HTML5 form validation attributes on the input fields,using JavaScript's Contraint Validation API to customize error messages and using JavaScript to validate the entire form before it is submitted. The form is fully responsive for desktop, mobile, and tablet devices. 
 
-#### Desktop Devices
-<table>
-    <tr><td><img src="./images/botany-basics-desktop.png"></td></tr>
-</table>
-
-### Mobile and Tablet Devices
+#### Desktop Device
 <table>
     <tr>
-    <td><img src="./images/botany-basics-phone.png" height = 500></td>
-    <td><img src="./images/botany-basics-ipad.png" height = 500></td>
+    <td><img src="./images/botany-basics-desktop.png"></td>
+    </tr>
+</table>
+
+### Mobile Device
+<table>
+    <tr>
+    <td><img src="./images/botany-basics-phone.png"></td>
+    </tr>
+</table>
+
+### Tablet Device
+<table>
+    <tr>
+    <td><img src="./images/botany-basics-ipad.png"></td>
     </tr>
 </table>
 
