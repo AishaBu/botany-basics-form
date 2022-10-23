@@ -31,20 +31,20 @@ CSS<br>
 JavaScript<br>
 
 ### Features
-Accepts letters and numbers for first and last name<br>
+Accepts letters and numbers for first and last name.<br>
 <br>
-Accepts a valid email address format(example@example.com)<br>
+Accepts a valid email address format <span>(example</span><span>@</span><span>example.com)</span>.<br>
 <br>
-Accepts a ten digit number in correct format (123-456-7890)<br>
+Accepts a ten digit number in correct format (123-456-7890).<br>
 <br>
-Accepts password that uses regex pattern -at least 1 capitalized letter, at least one lowercase letter,
-<br> at least one special character, at least 1 number, and a minimum of 8 characters<br>
+Accepts password that uses regex pattern - at least 1 capitalized letter, at least one lowercase letter,
+<br> at least one special character, at least 1 number, and a minimum of 8 characters.<br>
 <br>
-Checks that passwords match regex pattern using JavaScript<br>
+Checks that passwords match regex pattern using JavaScript.<br>
 <br>
-Checks that password and confirmation passwords match on input and before form is submitted<br>
+Checks that password and confirmation passwords match on input and before form is submitted.<br>
 <br>
-Shows error messages and prevents form submission if any fields are invalid<br>
+Shows error messages and prevents form submission if any fields are invalid.<br>
 <br>
 
 
