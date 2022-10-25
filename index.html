@@ -16,7 +16,17 @@
     <main class="container">
         <div class="title-and-image">
                 <h1 id="botany-basics-title">Botany Basics</h1>
-                <img src="./images/flowers-images.jpg" alt="flowers" id="flowers-image">
+
+                <img src="./images/flowers-image-small-640.jpg"
+                alt="flowers" 
+                id="flowers-image"
+
+                srcset="/images/flowers-image-small-640.jpg 640w,
+                images/flowers-image-medium-1920.jpg 1920w,
+                images/flowers-image-large-2400.jpg 2400w"
+
+                sizes="(max-width: 1120px) 100vw, 40vw,
+                    (min-width: 1121px) 40vw, 100vw">
         </div>
 
         <div class="form-background">
