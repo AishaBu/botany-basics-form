@@ -34,7 +34,7 @@ const haveAccPar = document.querySelector('.have-account-par');
 /*First Name*/
 firstName.addEventListener('input', () => {
 
-    /*if, an error message is triggered and the user begins typing valid characters,
+    /*If an error message is triggered and the user begins typing valid characters,
      it should remove the error message and red border color*/
 
     if(firstName.validity.valid){
@@ -44,8 +44,9 @@ firstName.addEventListener('input', () => {
     }
     else{
 
-        /*if the input is empty or using the wrong characters,
-         types like periods or special characters*/
+        /*If the input fields is empty or using the wrong characters,
+         types like periods or special characters, error
+         message should display*/
       
         if(firstName.validity.valueMissing){
             firstNameErrorMessage.textContent = '*Please enter a first name';
@@ -70,8 +71,8 @@ firstName.addEventListener('input', () => {
 /*Last Name*/
 lastName.addEventListener('input', () => {
 
-    /*if there is an error message showing and the first name input type is valid, 
-    it should remove the error message and reset the class name of the message*/
+    /*If an error message is triggered and the user begins typing valid 
+    characters,it should remove the error message and red border color*/
 
     if(lastName.validity.valid){
 
@@ -80,8 +81,8 @@ lastName.addEventListener('input', () => {
     }
     else{
 
-        /*if the input is using the wrong character types, 
-        like periods and special characters*/
+        /*If the input fields is using the wrong character types, like 
+        periods and special characters,error message should display*/
 
         if(lastName.validity.patternMismatch){
 
@@ -99,8 +100,8 @@ lastName.addEventListener('input', () => {
 /*Email Address*/
 emailAddress.addEventListener('input', () => {
 
-    /*if there is an error message showing and the first name input type is valid, 
-    it should remove the error message and reset the class name of the message*/
+    /*If an error message is triggered and the user begins typing valid
+     characters,it should remove the error message and red border color*/
 
     if(emailAddress.validity.valid){
 
@@ -110,7 +111,8 @@ emailAddress.addEventListener('input', () => {
     }
     else{
 
-        /*if the input is empty or the wrong type for an email*/
+        /*If the input field is empty or value is the wrong type for
+         an email, error message should display*/
 
         if( emailAddress.validity.valueMissing){
 
@@ -134,8 +136,8 @@ emailAddress.addEventListener('input', () => {
 /*Phone Number*/
 phoneNumber.addEventListener('input', () => {
 
-    /*if there is an error message showing and the first name input type is vali
-    it should remove the error message and reset the class name of the message*/
+    /*If an error message is triggered and the user begins typing valid characters,
+     it should remove the error message and red border color*/
 
     if(phoneNumber.validity.valid){
 
@@ -144,7 +146,8 @@ phoneNumber.addEventListener('input', () => {
         }
 
      
-     /*if the input is not the right format or not numbers*/
+     /*If the input value is not the right format or not numbers, 
+     error message should display*/
      else if(phoneNumber.validity.patternMismatch){
     
         phoneErrorMessage.textContent = "*You need to enter a number in the format of: 123-456-7890";
@@ -159,8 +162,8 @@ phoneNumber.addEventListener('input', () => {
 /*User Password*/
 userPassword.addEventListener('input', () => {
 
-    /*if there is an error message showing and the first name input type is valid, 
-    it should remove the error message and reset the class name of the message*/
+    /*If an error message is triggered and the user begins typing valid characters,
+     it should remove the error message and red border color*/
 
     if(userPassword.validity.valid){
        userPasswordErrorMessage.textContent = '';
@@ -185,8 +188,8 @@ userPassword.addEventListener('input', () => {
 /*Confirm Password*/
 confirmPassword.addEventListener('input', () => {
 
-    /*if there is an error message showing and the first name input type is valid, 
-    it should remove the error message and reset the class name of the message*/
+      /*If an error message is triggered and the user begins typing valid characters,
+     it should remove the error message and red border color*/
 
     if(confirmPassword.validity.valid){
        confirmPasswordErrorMessage.textContent = '';
@@ -281,8 +284,8 @@ form.addEventListener("submit", (event) => {
 })
 
 
-/*Display and remove tooltip when input is 
-either on focus or on blur-when user leaves input field*/
+/*Display or remove tooltip when input field is either 
+on focus or on mouseout, and match regex on keyup*/
 function onKeyUpAndFocused(){
 
   /*User Password OnFocus*/
@@ -368,7 +371,8 @@ function matchRegexLines(passField){
 
 
 /*Checks if required fields are empty 
-or pattern mismatched when submit button is clicked*/
+or pattern mismatched when submit button is clicked,
+disables submit button and displays error messages if true*/
 function checksFormInputsWhenSubmitted(){
 
     /*First Name*/
@@ -416,12 +420,12 @@ form.addEventListener("submit", (event) => {
     if (!firstName.validity.valid || !lastName.validity.valid || !emailAddress.validity.valid 
         || !phoneNumber.validity.valid || !userPassword.validity.valid || !confirmPassword.validity.valid) {
 
-        /*Along with displaying the error message, it will prevent 
-        the form from being sent by canceling the submit button event*/
+        /*If the input values are invalid, the form will prevented 
+       being sent to the server by canceling the submit button event*/
 
         event.preventDefault();
 
-      /*If it the input fields are invalid, it will give the form a class of submitted,which is styled in the css, 
+      /*If the input fields are invalid, it will give the form a class of submitted,which is styled in the css, 
       this is so it doesn't show the invalid style right away on page load, it will wait for the submit
        button to be clicked, and it will display the error message*/
 
