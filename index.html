@@ -1,92 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Link Styles and JS Files-->
-    <link href="./style.css" rel="stylesheet"/>
-    <script src="./script.js" defer></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Botany Basics</title>
-</head>
+        <!--Link Styles and JS Files-->
+        <link href="./style.css" rel="stylesheet" />
+        <script src="./script.js" defer></script>
 
-<body>   
-    <main class="container">
-        <div class="title-and-image">
+        <title>Botany Basics</title>
+    </head>
+
+    <body>
+        <main class="container">
+            <div class="title-and-image">
                 <h1 id="botany-basics-title">Botany Basics</h1>
                 <img alt="flowers" id="flowers-image" src="./images/flowers-image-small-640.jpg">
             </div>
 
-        <div class="form-background">
-                <p class="sign-up-now-par">This is a demo registration page! Sign up <i>now</i> to get bi-weekly blog posts from Botany Basics! You don't want to miss out on awesome plants!</p>
-                <p class="required-asterisk-par">Required fields are followed by an asterisk <snap aria-label="required">*</snap></p>
+            <div class="form-background">
+                <p class="sign-up-now-par">This is a demo registration page! Sign up <i>now</i> to get bi-weekly blog
+                    posts from Botany Basics! You don't want to miss out on awesome plants!</p>
+                <p class="required-asterisk-par">Required fields are followed by an asterisk <snap
+                        aria-label="required">*</snap>
+                </p>
 
-        <!--FORM-->
-        <form action="" method="get" id="button-reference" novalidate>
-            <ul>
-                <li>
-                    <label for="first-name">First Name<snap aria-label="required">*</snap></label>
-                    <input type="text" id="first-name" pattern="[A-Za-z0-9]+" required>
-                    <span class="error" aria-live="polite"></span>
-                </li>
+                <!--FORM-->
+                <form action="" method="POST" id="button-reference" name="sign-up-form" data-netlify="true"
+                    autocomplete="off" novalidate>
+                    <ul>
+                        <li>
+                            <label for="first-name">First Name<snap aria-label="required">*</snap></label>
+                            <input type="text" id="first-name" pattern="[A-Za-z0-9]+" required>
+                            <span class="error" aria-live="polite"></span>
+                        </li>
 
-                <li>
-                    <label for="last-name">Last Name <span class="optional">(optional)</span></label>
-                    <input type="text" id="last-name" pattern="[A-Za-z0-9]+">
-                    <span class="error" aria-live="polite"></span>
-                </li>
+                        <li>
+                            <label for="last-name">Last Name <span class="optional">(optional)</span></label>
+                            <input type="text" id="last-name" pattern="[A-Za-z0-9]+">
+                            <span class="error" aria-live="polite"></span>
+                        </li>
 
-                <li>
-                    <label for="email">Email<snap aria-label="required">*</snap></label>
-                    <input type="email" id="email" value="" required>
-                    <span class="error" aria-live="polite"></span>
-                </li>
+                        <li>
+                            <label for="email">Email<snap aria-label="required">*</snap></label>
+                            <input type="email" id="email" value="" required>
+                            <span class="error" aria-live="polite"></span>
+                        </li>
 
-                <li>
-                    <label for="phone-number">Phone Number <span class="optional">(optional)</span></label>
-                    <input type="tel" id="phone-number" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
-                    <span class="error" aria-live="polite"></span>
-                </li>
+                        <li>
+                            <label for="phone-number">Phone Number <span class="optional">(optional)</span></label>
+                            <input type="tel" id="phone-number" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                            <span class="error" aria-live="polite"></span>
+                        </li>
 
-                <li>
-                    <label for="user-password">Password<snap aria-label="required">*</snap></label>
-                    <input type="password" id="user-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" minlength="8" maxlength="20" required>
-                    <span class="error" aria-live="polite"></span> 
-                    <button id="show-user-pass-toggle" aria-live="polite">Show Password</button>
-                </li>
+                        <li>
+                            <label for="user-password">Password<snap aria-label="required">*</snap></label>
+                            <input type="password" id="user-password"
+                                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                minlength="8" maxlength="20" required>
+                            <span class="error" aria-live="polite"></span>
+                            <button id="show-user-pass-toggle" aria-live="polite">Show Password</button>
+                        </li>
 
-                <li>
-                    <label for="confirm-password">Confirm Password<snap aria-label="required">*</snap></label>
-                    <input type="password" id="confirm-password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" minlength="8" maxlength="20" required>
-                    <span class="error" aria-live="polite"></span>
-                    <button id="show-confirm-pass-toggle" aria-live="polite">Show Password</button>
-                </li>
+                        <li>
+                            <label for="confirm-password">Confirm Password<snap aria-label="required">*</snap></label>
+                            <input type="password" id="confirm-password"
+                                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                minlength="8" maxlength="20" required>
+                            <span class="error" aria-live="polite"></span>
+                            <button id="show-confirm-pass-toggle" aria-live="polite">Show Password</button>
+                        </li>
 
-                <li id="password-tooltip">
-                    <h4>Password must contain the following:</h4>
-                    <p  id="upper-case-letter" data-is-valid="false">A capital (uppercase) letter</p>
-                    <p  id="lower-case-letter" data-is-valid="false">A lowercase letter</p>
-                    <p id="a-number" data-is-valid="false">A number</p>
-                    <p id="special-character" data-is-valid="false">A special character</p>
-                    <p id="minimum-character-length" data-is-valid="false">Minimum 8 characters</p>
-                </li>
-            </ul>
+                        <li id="password-tooltip">
+                            <h4>Password must contain the following:</h4>
+                            <p id="upper-case-letter" data-is-valid="false">A capital (uppercase) letter</p>
+                            <p id="lower-case-letter" data-is-valid="false">A lowercase letter</p>
+                            <p id="a-number" data-is-valid="false">A number</p>
+                            <p id="special-character" data-is-valid="false">A special character</p>
+                            <p id="minimum-character-length" data-is-valid="false">Minimum 8 characters</p>
+                        </li>
+                    </ul>
 
-            <div class="button-and-par">
-                <button type="submit" class="submit-button"> Sign Up</button> 
-                <p class="have-account-par">Already have an account? <a href="#" class="login-link">Log in</a></p>
+                    <div class="button-and-par">
+                        <button type="submit" class="submit-button"> Sign Up</button>
+                        <p class="have-account-par">Already have an account? <a href="#" class="login-link">Log in</a>
+                        </p>
+                    </div>
+                </form>
             </div>
-    </form>
-    </div>
 
-    </main>
+        </main>
 
-    <footer>
-        <p>&copy; 2022 AishaBu</p> 
-        <a href="https://github.com/AishaBu/sign-up-form"> <img src="./images/github-white-icon.png"> </a>
-    </footer>
+        <footer>
+            <p>&copy; 2022 AishaBu</p>
+            <a href="https://github.com/AishaBu/sign-up-form"> <img src="./images/github-white-icon.png"> </a>
+        </footer>
 
-</body>
+    </body>
+
 </html>
