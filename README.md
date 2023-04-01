@@ -8,20 +8,27 @@
 
 ### Description
 
-This sign up form was created for the Sign Up Form assignment in the Odin Project. The assignment is to make a fully functional sign up form using HTML, CSS, and JavaScript. I did the form validation by using HTML5 form validation attributes on the input fields,using JavaScript's Contraint Validation API to customize error messages and using JavaScript to validate the entire form before it is submitted. The form is fully responsive for desktop, mobile, and tablet devices.
+The botany basics sign up form is a validated sign up form using HTML, CSS, and JavaScript. The form validation is done by using HTML5 form validation attributes and the JavaScript's Constraint Validation API, and it is deployed with Netlify.The form is fully responsive for desktop, mobile, and tablet devices. The features requirements of the form are the from The Odin Project's [Sign Up Form Assignment](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form).
 
 #### Desktop Device
 
 <table>
-    <tr><td><img src="./images/botany-basics-desktop.png"></td></tr>
+    <tr>
+    <td><img src="./images/botany-basics-desktop.png"></td>
+    </tr>
 </table>
 
 ### Mobile and Tablet Devices
 
 <table>
     <tr>
-    <td><img src="./images/botany-basics-phone.png" height = 800></td>
-    <td><img src="./images/botany-basics-ipad.png" height = 800></td>
+    <td><img src="./images/botany-basics-phone.png"></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+    <td><img src="./images/botany-basics-ipad.png"></td>
     </tr>
 </table>
 
