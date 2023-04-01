@@ -148,7 +148,6 @@ ul {
 
 
 /*Sign Up Button*/
-
 .submit-button{
     width: 120px;
     height: 40px;
@@ -156,18 +155,23 @@ ul {
 
     background-color: rgb(155, 32, 93);
     color: white;
+    -webkit-text-stroke: 0.3px white;
     font-weight: bold;
     border-radius: 5px;
-    border: none;
+    border: 1px solid  rgb(155, 32, 93);;
 
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     text-align: center;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 
 .submit-button:hover{
     background-color: rgb(228, 151, 189);
+    border: 1px solid   rgb(228, 151, 189);
+    -webkit-text-stroke: 0.3px rgb(228, 151, 189);
+    color: black;
 }
 
 
