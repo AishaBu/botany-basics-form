@@ -8,7 +8,7 @@
 
 ### Description
 
-The botany basics sign up form is a validated sign up form using HTML, CSS, and JavaScript. The form validation is done by using HTML5 form validation attributes and the JavaScript's Constraint Validation API, and it is deployed with Netlify.The form is fully responsive for desktop, mobile, and tablet devices. The features requirements of the form are the from The Odin Project's [Sign Up Form Assignment](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form).
+The Botany Basics sign up form is a validated sign up form using HTML, CSS, and JavaScript. The form validation is done by using HTML5 form validation attributes and the JavaScript's Constraint Validation API, and it is deployed with Netlify.The form is fully responsive for desktop, mobile, and tablet devices. The features requirements of the form are the from The Odin Project's [Sign Up Form Assignment](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form).
 
 ### Live Site
 
