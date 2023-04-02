@@ -24,9 +24,6 @@ The botany basics sign up form is a validated sign up form using HTML, CSS, and 
     <tr>
     <td><img src="./images/botany-basics-phone.png"></td>
     </tr>
-</table>
-
-<table>
     <tr>
     <td><img src="./images/botany-basics-ipad.png"></td>
     </tr>
