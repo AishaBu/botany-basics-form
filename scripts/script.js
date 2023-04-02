@@ -8,8 +8,8 @@ const phoneNumber = document.getElementById('phone-number');
 const userPassword = document.getElementById('user-password');
 const confirmPassword = document.getElementById('confirm-password');
 const showPassword = document.getElementById('show-password');
-let showUserPassToggle = document.getElementById('show-user-pass-toggle');
-let showConfirmPassToggle = document.getElementById('show-confirm-pass-toggle');
+const showUserPassToggle = document.getElementById('show-user-pass-toggle');
+const showConfirmPassToggle = document.getElementById('show-confirm-pass-toggle');
 
 
 const firstNameErrorMessage = document.querySelector('#first-name + span.error');
@@ -173,7 +173,7 @@ userPassword.addEventListener('input', () => {
         if(userPassword.validity.valueMissing){
             userPasswordErrorMessage.textContent = "You need to enter a password";
             userPasswordErrorMessage.style.color = "red";
-            showUserPassToogle.style.display = 'none';
+            showUserPassToggle.style.display = 'none';
            
         }else{
             userPasswordErrorMessage.textContent = "";
@@ -201,7 +201,7 @@ confirmPassword.addEventListener('input', () => {
                 confirmPasswordErrorMessage.setAttribute('id','confirm-password-error-message');
                 confirmPasswordErrorMessage.style.color = "red";
                 confirmPasswordErrorMessage.className = 'error';
-                showConfirmPassToogle.style.display = "none";
+                showConfirmPassToggle.style.display = "none";
         }else{
                 confirmPasswordErrorMessage.textContent = "";
                 checkPasswordsLength();
