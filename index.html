@@ -6,8 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--Link Styles and JS Files-->
+        <!--Link CSS Styles and JS Files-->
         <link href="./styles/style.css" rel="stylesheet" />
+        <!--Confirmation Page CSS Files-->
+        <link href="./styles/confirmation-page.css" rel="stylesheet" />
         <script src="./scripts/script.js" defer></script>
 
         <title>Botany Basics</title>
@@ -28,7 +30,8 @@
                 </p>
 
                 <!--FORM-->
-                <form action="" method="POST" id="button-reference" name="sign-up-form" data-netlify="true"
+                <form action="/styles/confirmation-page.css" method="POST" id="button-reference"
+                    name="botany-basics-sign-up-form" data-netlify="true" netlify-honeypot="bot-field"
                     autocomplete="off" novalidate>
                     <ul>
                         <li>
@@ -82,6 +85,14 @@
                             <p id="minimum-character-length" data-is-valid="false">Minimum 8 characters</p>
                         </li>
                     </ul>
+
+                    <!--Netlify Form Spam Filtering-->
+                    <!--Extra Field-->
+                    <div class="hidden">
+                        <label>Don't fill this out if you are human:</label>
+                        <input name="bot-field">
+                        <span class="error" aria-live="polite"></span>
+                    </div>
 
                     <div class="button-and-par">
                         <button type="submit" class="submit-button"> Sign Up</button>
